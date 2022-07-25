@@ -8,14 +8,26 @@
 // types of variables
 // string - think of as some text
 // integer - think of as a number
+// int charlieAge = 9;
 
-string welcomeText = "Welcome to Charlie's console app";
+// string welcomeText = "Welcome to Charlie's console app";
 // This is a method called "WriteLine" that is part of the the class "Console"
-Console.WriteLine(welcomeText);
+// Console.WriteLine(welcomeText);
 
-string nameAsk = "Please enter your name";
-Console.WriteLine(nameAsk);
+// string askName = "Please enter your name";
+// Console.WriteLine(askName);
 
-string username = Console.ReadLine();
+// string username = Console.ReadLine();
+// Console.WriteLine("Hello " + username);
 
-Console.WriteLine("Hello " + username);
+// string askAge = "How old are you?";
+// Console.WriteLine(askAge);
+
+// string age = Console.ReadLine();
+// Console.WriteLine("You entered your age as " + age);
+
+
+// method to convert a string to an integer
+int number;
+int.TryParse("9876", out number);
+Console.WriteLine(number);
