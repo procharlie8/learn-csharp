@@ -7,27 +7,45 @@
 
 // types of variables
 // string - think of as some text
+// string name = "Charlie";
 // integer - think of as a number
 // int charlieAge = 9;
+// boolean - can only have the value true or false (a bit like an on/off switch)
+// bool isDadStinky = false;
 
-// string welcomeText = "Welcome to Charlie's console app";
+// if statement - is a way to check if something is true or false
+// the code inside the curly brackets an if statement only runs if the value inside the brackets is true
+// if (true)
+// {
+//     string stinkys = "You have entered a number";
+//     Console.WriteLine(stinkys);
+// }
+
+string welcomeText = "Welcome to Charlie's console app";
 // This is a method called "WriteLine" that is part of the the class "Console"
-// Console.WriteLine(welcomeText);
+Console.WriteLine(welcomeText);
 
-// string askName = "Please enter your name";
-// Console.WriteLine(askName);
+string askName = "Please enter your name";
+Console.WriteLine(askName);
 
-// string username = Console.ReadLine();
-// Console.WriteLine("Hello " + username);
+string username = Console.ReadLine();
+Console.WriteLine("Hello " + username);
 
-// string askAge = "How old are you?";
-// Console.WriteLine(askAge);
+string askAge = "How old are you?";
+Console.WriteLine(askAge);
 
-// string age = Console.ReadLine();
-// Console.WriteLine("You entered your age as " + age);
-
+string age = Console.ReadLine();
+Console.WriteLine("You entered your age as " + age);
 
 // method to convert a string to an integer
 int number;
-int.TryParse("9876", out number);
-Console.WriteLine(number);
+bool isNumber = int.TryParse(age, out number);
+
+while (isNumber == false)
+{
+    Console.WriteLine("That is not a number, please try again");
+    Console.WriteLine("How old are you?");
+    string ageRetry = Console.ReadLine();
+    Console.WriteLine("You entered your age as " + ageRetry);
+    isNumber = int.TryParse(ageRetry, out number);
+}
